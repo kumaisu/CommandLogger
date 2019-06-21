@@ -1,0 +1,17 @@
+main: com.mycompany.commandlogger.CommandLogger
+name: CommandLogger
+version: 0.1
+description: Player Command Log plugin
+author: Kumaisu
+database: true
+commands:
+    logger:
+        description: Player Command Log Admins
+        aliases: pcl
+        permission: CommandLogger.admin
+        permission-message: You do not have permission.
+        usage: /<command>
+permissions:
+    CommandLogger.view:
+        description: Show Other Player Command
+        default: op
