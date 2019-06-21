@@ -1,0 +1,16 @@
+#Player Command Logger Config
+
+#   Debug ( max / full / Default:normal / none )
+Debug: normal
+
+#   MySQL Settings
+mysql:
+  enabled: false
+  host: localhost
+  port: 3306
+  database: CommandLogger
+  username: root
+  password: password
+
+#   File out
+File: false

@@ -14,7 +14,7 @@ none
   
 ## Releases  
 Github projects have a "releases" link on their home page.  
-If you still don't see it, [click here](https://github.com/kumaisu/CommandLogger/releases) for PremisesEvent releases.  
+If you still don't see it, [click here](https://github.com/kumaisu/CommandLogger/releases) for CommandLogger releases.  
   
 ## Wikis  
 [Player Command Logger Wiki](https://github.com/kumaisu/CommandLogger/wiki)  
