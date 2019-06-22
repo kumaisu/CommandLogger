@@ -28,6 +28,9 @@ public class Config {
     public static String username;
     public static String password;
 
+    public static boolean fileOut;
+    public static boolean dbOut;
+    
     public Config(Plugin plugin) {
         this.plugin = plugin;
         Tools.entryDebugFlag( programCode, consoleMode.none );
@@ -47,11 +50,14 @@ public class Config {
         }
         config = plugin.getConfig();
 
+        dbOut = config.getBoolean( "mysql.enabled", false );
         host = config.getString( "mysql.host" );
         port = config.getString( "mysql.port" );
         database = config.getString( "mysql.database" );
         username = config.getString( "mysql.username" );
         password = config.getString( "mysql.password" );
+
+        fileOut = config.getBoolean( "File", false );
 
         consoleMode DebugFlag;
         try {
@@ -64,11 +70,16 @@ public class Config {
     }
 
     public static void Status( Player p ) {
-        consoleMode consolePrintFlag = ( ( p == null ) ? consoleMode.none:consoleMode.stop );
-        Tools.Prt( p, ChatColor.GREEN + "=== Player Command Logger Status ===", consolePrintFlag, programCode );
-        Tools.Prt( p, ChatColor.WHITE + "Degub Mode : " + ChatColor.YELLOW + Tools.consoleFlag.get( programCode ).toString(), consolePrintFlag, programCode );
-        Tools.Prt( p, ChatColor.WHITE + "Mysql : " + ChatColor.YELLOW + host + ":" + port, consolePrintFlag, programCode );
-        Tools.Prt( p, ChatColor.WHITE + "DB Name : " + ChatColor.YELLOW + database, consolePrintFlag, programCode );
-        Tools.Prt( p, ChatColor.GREEN + "==========================", consolePrintFlag, programCode );
+        Tools.Prt( p, ChatColor.GREEN + "=== Player Command Logger Status ===", programCode );
+        Tools.Prt( p, ChatColor.WHITE + "Degub Mode : " + ChatColor.YELLOW + Tools.consoleFlag.get( programCode ).toString(), programCode );
+        Tools.Prt( p, ChatColor.WHITE + "Log File   : " + ChatColor.YELLOW + ( fileOut ? "True":"False" ), programCode );
+        Tools.Prt( p, ChatColor.WHITE + "Database   : " + ChatColor.YELLOW + ( dbOut ? "True":"False" ), programCode );
+        if ( dbOut ) {
+            Tools.Prt( p, ChatColor.WHITE + "Mysql      : " + ChatColor.YELLOW + host + ":" + port, programCode );
+            Tools.Prt( p, ChatColor.WHITE + "DB Name    : " + ChatColor.YELLOW + database, programCode );
+            Tools.Prt( p, ChatColor.WHITE + "username   : " + ChatColor.YELLOW + username, programCode );
+            Tools.Prt( p, ChatColor.WHITE + "password   : " + ChatColor.YELLOW + password, programCode);
+        }
+        Tools.Prt( p, ChatColor.GREEN + "====================================", programCode );
     }
 }
