@@ -9,6 +9,7 @@ commands:
         description: Player Command Log Admins
         aliases: pcl
         permission: CommandLogger.admin
+        default: op
         permission-message: You do not have permission.
         usage: /<command>
 permissions:
