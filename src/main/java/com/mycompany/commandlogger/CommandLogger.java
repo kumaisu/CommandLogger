@@ -58,16 +58,13 @@ public class CommandLogger extends JavaPlugin implements Listener {
 
         String msgDisplay = Utility.StringBuild(
             ChatColor.DARK_GREEN.toString(), "[", programCode, "] ",
-            ChatColor.DARK_AQUA.toString(), player.getDisplayName(),
+            ChatColor.DARK_AQUA.toString(), player.getDisplayName(), " ",
             ChatColor.GRAY.toString(), message
         );
-
-        String msgLog = Utility.StringBuild( player.getDisplayName(), message );
-
         Bukkit.getOnlinePlayers().stream().filter( ( p ) -> ( p.hasPermission( "CommandLogger.view" ) || p.isOp() ) ).forEachOrdered( ( p ) -> { p.sendMessage( msgDisplay ); } );
 
+        String msgLog = Utility.StringBuild( player.getName(), " ", message );
         Tools.Prt( msgLog, consoleMode.full, programCode );
-
         if ( Config.fileOut ) { WriteCommand.Output( msgLog, this.getDataFolder().toString() ); }
 
         return true;
