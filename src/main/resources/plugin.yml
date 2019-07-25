@@ -7,12 +7,9 @@ database: true
 commands:
     logger:
         description: Player Command Log Admins
-        aliases: pcl
-        permission: CommandLogger.admin
-        default: op
-        permission-message: You do not have permission.
         usage: /<command>
 permissions:
+    CommandLogger.admin:
+        permission-message: You do not have permission.
     CommandLogger.view:
         description: Show Other Player Command
-        default: op

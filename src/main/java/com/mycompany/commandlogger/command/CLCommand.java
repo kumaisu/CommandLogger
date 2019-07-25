@@ -36,14 +36,14 @@ public class CLCommand implements CommandExecutor {
         if ( player == null || player.hasPermission( "CommandLogger.admin" ) ) {
             if ( args.length > 0 ) {
                 switch ( args[0] ) {
-                    case "reload":
+                    case "Reload":
                         instance.config = new Config( instance );
                         Tools.Prt( player, ChatColor.GREEN + "Command Logger Config Reloaded.", Tools.consoleMode.max, programCode );
                         return true;
-                    case "status":
+                    case "Status":
                         Config.Status( player );
                         return true;
-                    case "console":
+                    case "Console":
                         try {
                             Tools.setDebug( args[1], programCode );
                         } catch ( Exception e ) {}
@@ -55,10 +55,13 @@ public class CLCommand implements CommandExecutor {
                         );
                         return true;
                     default:
-                        return false;
                 }
-            } else return false;
-        } else return false;
+            }
+        } else Tools.Prt( player, "You do not have permission.", programCode );
+        Tools.Prt( player, "Logger Reload", programCode );
+        Tools.Prt( player, "Logger Status", programCode );
+        Tools.Prt( player, "Logger Console [max,full,noremal,none]", programCode );
+        return false;
     }
     
 }
