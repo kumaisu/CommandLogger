@@ -60,7 +60,7 @@ public class CLCommand implements CommandExecutor {
         } else Tools.Prt( player, "You do not have permission.", programCode );
         Tools.Prt( player, "Logger Reload", programCode );
         Tools.Prt( player, "Logger Status", programCode );
-        Tools.Prt( player, "Logger Console [max,full,noremal,none]", programCode );
+        Tools.Prt( player, "Logger Console [max,full,normal,none]", programCode );
         return false;
     }
     
