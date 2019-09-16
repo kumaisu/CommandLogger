@@ -4,6 +4,7 @@ version: 0.1
 description: Player Command Log plugin
 author: Kumaisu
 database: true
+api-version: 1.14
 commands:
     logger:
         description: Player Command Log Admins
