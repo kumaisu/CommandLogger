@@ -6,6 +6,9 @@ Minecraft Plugin Player Command Logger Repository
 CommandLogger は、オンライン中のプレイヤーが使ったコマンドを記録するプラグインです。  
 (CommandLogger is a plug-in that records the commands used by players online.)  
   
+## Operation check  
+Spigot Server 1.12.2 and 1.14.4  
+
 ## Support  
 Open a new issue here: [https//github.com/kumaisu/CommandLogger/issues](https://github.com/kumaisu/CommandLogger/issues)  
   
