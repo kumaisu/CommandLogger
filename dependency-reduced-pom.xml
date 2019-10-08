@@ -4,6 +4,7 @@
   <groupId>com.mycompany</groupId>
   <artifactId>CommandLogger</artifactId>
   <version>0.1</version>
+  <description>Player Command Log plugin</description>
   <scm>
     <connection>scm:svn:http://127.0.0.1/dummy</connection>
     <developerConnection>scm:svn:https://127.0.0.1/dummy</developerConnection>
