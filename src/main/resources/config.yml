@@ -1,6 +1,6 @@
 #Player Command Logger Config
 
-#   Debug ( max / full / Default:normal / none )
+#   Debug ( max / full / Default:normal / stop )
 Debug: normal
 
 #   MySQL Settings
