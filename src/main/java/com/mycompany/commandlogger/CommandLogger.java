@@ -35,7 +35,7 @@ public class CommandLogger extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         this.getServer().getPluginManager().registerEvents( this, this );
-        Tools.entryDebugFlag( programCode, consoleMode.none );
+        Tools.entryDebugFlag( programCode, consoleMode.print );
         config = new Config( this );
         getCommand( "logger" ).setExecutor( new CLCommand( this ) );
     }

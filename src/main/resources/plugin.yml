@@ -1,7 +1,7 @@
 main: com.mycompany.commandlogger.CommandLogger
 name: CommandLogger
-version: ${project.version}
-description: ${project.description}
+version: 0.1.2
+description: Player Command Log plugin
 author: Kumaisu
 database: true
 api-version: 1.14
