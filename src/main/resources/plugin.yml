@@ -1,6 +1,6 @@
 main: com.mycompany.commandlogger.CommandLogger
 name: CommandLogger
-version: 0.1.2
+version: 0.1.3
 description: Player Command Log plugin
 author: Kumaisu
 database: true

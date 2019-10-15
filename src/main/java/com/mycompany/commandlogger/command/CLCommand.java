@@ -44,12 +44,13 @@ public class CLCommand implements CommandExecutor {
                         Config.Status( player );
                         return true;
                     case "Console":
-                        try {
-                            Tools.setDebug( args[1], programCode );
-                        } catch ( Exception e ) {}
+                        if ( !Tools.setDebug( args[1], programCode ) ) {
+                            Tools.entryDebugFlag( programCode, Tools.consoleMode.normal );
+                            Tools.Prt( ChatColor.RED + "Config Debugモードの指定値が不正なので、normal設定にしました", programCode );
+                        }
                         Tools.Prt( player,
                             ChatColor.GREEN + "System Debug Mode is [ " +
-                            ChatColor.RED + Tools.consoleFlag.get( programCode ) +
+                            ChatColor.RED + Tools.consoleFlag.get( programCode ).toString() +
                             ChatColor.GREEN + " ]",
                             programCode
                         );
