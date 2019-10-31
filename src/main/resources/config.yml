@@ -14,3 +14,9 @@ mysql:
 
 #   File out
 File: false
+
+#   No Logging Command
+NoWrite:
+    - home
+    - spawn
+

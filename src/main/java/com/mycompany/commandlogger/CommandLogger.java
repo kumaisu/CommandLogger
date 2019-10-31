@@ -50,11 +50,11 @@ public class CommandLogger extends JavaPlugin implements Listener {
     }
 
     @EventHandler
-    public boolean onPreprocess( PlayerCommandPreprocessEvent event ) {
+    public void onPreprocess( PlayerCommandPreprocessEvent event ) {
         String message = event.getMessage();
         Player player = event.getPlayer();
 
-        if ( player == null ) { return false; }
+        if ( player == null ) { return; }
 
         String msgDisplay = Utility.StringBuild(
             ChatColor.DARK_GREEN.toString(), "[", programCode, "] ",
@@ -65,8 +65,15 @@ public class CommandLogger extends JavaPlugin implements Listener {
 
         String msgLog = Utility.StringBuild( player.getName(), " ", message );
         Tools.Prt( msgLog, consoleMode.full, programCode );
-        if ( Config.fileOut ) { WriteCommand.Output( msgLog, this.getDataFolder().toString() ); }
 
-        return true;
+        for ( String key : Config.Aleart ) {
+            if ( message.toLowerCase().contains( key.toLowerCase() ) ) {
+                return;
+            }
+        }
+
+        if ( Config.fileOut ) {
+            WriteCommand.Output( msgLog, this.getDataFolder().toString() );
+        }
     }
 }

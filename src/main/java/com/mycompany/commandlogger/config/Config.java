@@ -3,6 +3,8 @@
  */
 package com.mycompany.commandlogger.config;
 
+import java.util.List;
+import java.util.ArrayList;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
@@ -31,6 +33,8 @@ public class Config {
     public static boolean fileOut;
     public static boolean dbOut;
     
+    public static List< String > Aleart = new ArrayList< String >();
+    
     public Config(Plugin plugin) {
         this.plugin = plugin;
         Tools.entryDebugFlag( programCode, consoleMode.print );
@@ -58,6 +62,8 @@ public class Config {
         password = config.getString( "mysql.password" );
 
         fileOut = config.getBoolean( "File", false );
+
+        Aleart   = ( List< String > ) config.getList( "NoWrite" );
 
         if ( !Tools.setDebug( config.getString( "Debug" ), programCode ) ) {
             Tools.entryDebugFlag( programCode, Tools.consoleMode.normal );
