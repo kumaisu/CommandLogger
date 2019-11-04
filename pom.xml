@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.mycompany</groupId>
     <artifactId>CommandLogger</artifactId>
-    <version>0.1.4</version>
+    <version>0.1.5</version>
     <description>Player Command Log plugin</description>
     <packaging>jar</packaging>
     <properties>
@@ -40,7 +40,6 @@
             <groupId>com.mycompany</groupId>
             <artifactId>KumaisuLibraries</artifactId>
             <version>0.2</version>
-            <type>jar</type>
         </dependency>
     </dependencies>
 
@@ -55,7 +54,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>3.2.1</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -63,17 +62,12 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
                             <artifactSet>
                                 <includes>
-                                    <include>com.mycompany:KumaisuLibraries</include>
+                                    <include>com.mycompany:*</include>
                                 </includes>
                             </artifactSet>
-                            <relocations>
-                                <relocation>
-                                    <pattern>com.mycompany:KumaisuLibraries</pattern>
-                                    <shadedPattern>com.mycompany.KumaisuLibraries</shadedPattern>
-                                </relocation>
-                            </relocations>
                         </configuration>
                     </execution>
                 </executions>
