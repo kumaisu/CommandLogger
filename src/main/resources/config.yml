@@ -20,3 +20,5 @@ NoWrite:
     - home
     - spawn
 
+NoPlayer:
+    - Kumaisu

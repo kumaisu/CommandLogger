@@ -34,6 +34,7 @@ public class Config {
     public static boolean dbOut;
     
     public static List< String > Aleart = new ArrayList< String >();
+    public static List< String > NoPlayer = new ArrayList< String >();
     
     public Config(Plugin plugin) {
         this.plugin = plugin;
@@ -64,6 +65,7 @@ public class Config {
         fileOut = config.getBoolean( "File", false );
 
         Aleart   = ( List< String > ) config.getList( "NoWrite" );
+        NoPlayer = ( List< String > ) config.getList( "NoPlayer" );
 
         if ( !Tools.setDebug( config.getString( "Debug" ), programCode ) ) {
             Tools.entryDebugFlag( programCode, Tools.consoleMode.normal );
