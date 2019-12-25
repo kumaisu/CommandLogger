@@ -61,15 +61,15 @@ public class CommandLogger extends JavaPlugin implements Listener {
             ChatColor.DARK_AQUA.toString(), player.getDisplayName(), " ",
             ChatColor.GRAY.toString(), message
         );
-        Bukkit.getOnlinePlayers().stream().filter( ( p ) ->
-            ( p.hasPermission( "CommandLogger.view" ) || p.isOp() ) ).forEachOrdered( ( p ) ->
-                { p.sendMessage( msgDisplay ); }
-        );
-
         String msgLog = Utility.StringBuild( player.getName(), " ", message );
         Tools.Prt( msgLog, consoleMode.full, programCode );
 
         if ( Config.NoPlayer.contains( player.getName() ) ) { return; }
+
+        Bukkit.getOnlinePlayers().stream().filter( ( p ) ->
+            ( p.hasPermission( "CommandLogger.view" ) ) ).forEachOrdered( ( p ) ->
+                { p.sendMessage( msgDisplay ); }
+        );
 
         for ( String key : Config.Aleart ) {
             if ( message.toLowerCase().contains( key.toLowerCase() ) ) { return; }
