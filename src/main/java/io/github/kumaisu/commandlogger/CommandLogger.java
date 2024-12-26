@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.commandlogger;
+package io.github.kumaisu.commandlogger;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.event.Listener;
@@ -12,13 +12,13 @@ import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
-import com.mycompany.commandlogger.config.Config;
-import com.mycompany.commandlogger.command.CLCommand;
-import com.mycompany.commandlogger.tool.WriteCommand;
-import com.mycompany.kumaisulibraries.Tools;
-import com.mycompany.kumaisulibraries.Utility;
-import static com.mycompany.commandlogger.config.Config.programCode;
-import static com.mycompany.kumaisulibraries.Tools.consoleMode;
+import io.github.kumaisu.commandlogger.config.Config;
+import io.github.kumaisu.commandlogger.command.CLCommand;
+import io.github.kumaisu.commandlogger.tool.WriteCommand;
+import io.github.kumaisu.commandlogger.Lib.Tools;
+import io.github.kumaisu.commandlogger.Lib.Utility;
+import static io.github.kumaisu.commandlogger.config.Config.programCode;
+import static io.github.kumaisu.commandlogger.Lib.Tools.consoleMode;
 
 /**
  *

@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.commandlogger.command;
+package io.github.kumaisu.commandlogger.command;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
-import com.mycompany.kumaisulibraries.Tools;
-import com.mycompany.commandlogger.CommandLogger;
-import com.mycompany.commandlogger.config.Config;
-import static com.mycompany.commandlogger.config.Config.programCode;
+import io.github.kumaisu.commandlogger.Lib.Tools;
+import io.github.kumaisu.commandlogger.CommandLogger;
+import io.github.kumaisu.commandlogger.config.Config;
+import static io.github.kumaisu.commandlogger.config.Config.programCode;
 
 /**
  *

@@ -1,7 +1,7 @@
 /*
  *  Copyright (c) 2018 sugichan. All rights reserved.
  */
-package com.mycompany.commandlogger.config;
+package io.github.kumaisu.commandlogger.config;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -9,8 +9,8 @@ import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
-import com.mycompany.kumaisulibraries.Tools;
-import com.mycompany.kumaisulibraries.Tools.consoleMode;
+import io.github.kumaisu.commandlogger.Lib.Tools;
+import io.github.kumaisu.commandlogger.Lib.Tools.consoleMode;
 
 /**
  * 設定ファイルを読み込む

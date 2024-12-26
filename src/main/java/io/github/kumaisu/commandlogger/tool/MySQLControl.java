@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.commandlogger.tool;
+package io.github.kumaisu.commandlogger.tool;
 
 import java.util.Date;
 import java.util.UUID;
@@ -15,9 +15,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import org.bukkit.entity.Player;
-import com.mycompany.kumaisulibraries.Tools;
-import com.mycompany.commandlogger.config.Config;
-import static com.mycompany.commandlogger.config.Config.programCode;
+import io.github.kumaisu.commandlogger.Lib.Tools;
+import io.github.kumaisu.commandlogger.config.Config;
+import static io.github.kumaisu.commandlogger.config.Config.programCode;
 
 /**
  *

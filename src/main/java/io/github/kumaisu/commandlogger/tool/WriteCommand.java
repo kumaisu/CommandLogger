@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.commandlogger.tool;
+package io.github.kumaisu.commandlogger.tool;
 
-import com.mycompany.kumaisulibraries.Tools;
-import com.mycompany.kumaisulibraries.Utility;
+import io.github.kumaisu.commandlogger.Lib.Tools;
+import io.github.kumaisu.commandlogger.Lib.Utility;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -14,7 +14,7 @@ import java.util.Date;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
-import static com.mycompany.commandlogger.config.Config.programCode;
+import static io.github.kumaisu.commandlogger.config.Config.programCode;
 
 /**
  *
